@@ -164,8 +164,7 @@ class PDFVectorDatabase:
 if __name__ == "__main__":
     # Configuration
     PDF_FILE = "clinic_policies.pdf"
-    API_KEY = "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"  
-    
+    API_KEY = os.getenv("OPENROUTER_API_KEY")    
     if not os.path.exists(PDF_FILE):
         print(f"Error: {PDF_FILE} not found. Please place the file in the same directory.")
     else:
